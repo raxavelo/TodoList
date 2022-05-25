@@ -10,7 +10,8 @@ import Foundation
 
 class Task: Object {
   @Persisted(primaryKey: true) var _id: ObjectId
-  @Persisted var task = ""
+  @Persisted var text = ""
+  @Persisted var isCompleted = false
   @Persisted var category = ""
   @Persisted var date = Date()
   @Persisted var timestamp = Date()

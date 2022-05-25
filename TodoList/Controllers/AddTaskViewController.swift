@@ -6,11 +6,18 @@
 //
 
 import UIKit
+import RealmSwift
 
 class AddTaskViewController: UIViewController {
   
   @IBOutlet weak var categoryPicker: UISegmentedControl!
+  @IBOutlet weak var datePicker: UIDatePicker!
+  @IBOutlet weak var taskTextField: UITextField!
+  
+  let realm = try! Realm()
+  
   var category: Categories = .work
+
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -30,6 +37,20 @@ class AddTaskViewController: UIViewController {
     print(category)
   }
   
+  @IBAction func addPressed(_ sender: UIButton) {
+    let task = Task()
+    task.text = taskTextField.text!
+    task.category = category.rawValue
+    task.date = datePicker.date
+    
+    do {
+      try realm.write {
+        realm.add(task)
+      }
+    } catch {
+      print(error.localizedDescription)
+    }
+  }
   
   /*
    // MARK: - Navigation
