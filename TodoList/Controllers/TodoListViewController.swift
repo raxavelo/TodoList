@@ -79,7 +79,16 @@ extension TodoListViewController: UITableViewDataSource {
 
 extension TodoListViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    do {
+      try realm.write {
+        tasks?[indexPath.row].isCompleted.toggle()
+      }
+    } catch {
+      print(error.localizedDescription)
+    }
     
+    tableView.deselectRow(at: indexPath, animated: true)
+    tableView.reloadData()
   }
   
 }
