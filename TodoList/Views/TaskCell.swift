@@ -13,7 +13,7 @@ class TaskCell: UITableViewCell {
   @IBOutlet weak var checkmarkImageView: UIImageView!
   @IBOutlet weak var dateLabel: UILabel!
   @IBOutlet weak var taskLabel: UILabel!
-  @IBOutlet weak var taskView: UIStackView!
+  @IBOutlet weak var taskView: UIView!
   
   var isCompleted: Bool = false {
     didSet {
@@ -30,23 +30,27 @@ class TaskCell: UITableViewCell {
     didSet {
       categoryImageView.widthAnchor.constraint(equalToConstant: 50.0).isActive = true
       categoryImageView.isHidden = false
+      
       switch category {
       case .shop:
         categoryImageView.image = UIImage(systemName: "cart")
+        taskView.backgroundColor = UIColor(named: "shopColor")
       case .work:
         categoryImageView.image = UIImage(systemName: "list.bullet.rectangle.portrait")
+        taskView.backgroundColor = UIColor(named: "workColor")
       case .others:
         categoryImageView.widthAnchor.constraint(equalToConstant: 0.0).isActive = true
         categoryImageView.isHidden = false
+        taskView.backgroundColor = UIColor(named: "othersColor")
       }
+      
     }
   }
   
   override func awakeFromNib() {
     super.awakeFromNib()
     
-    taskView.layer.cornerRadius = 10.0
-    checkmarkImageView.translatesAutoresizingMaskIntoConstraints = false
+    makeLayout()
   }
   
   override func setSelected(_ selected: Bool, animated: Bool) {
@@ -55,4 +59,11 @@ class TaskCell: UITableViewCell {
     // Configure the view for the selected state
   }
   
+  private func makeLayout() {
+    taskView.layer.cornerRadius = 20.0
+    taskView.layer.shadowRadius = 3.0
+    taskView.layer.shadowOpacity = 0.3
+    checkmarkImageView.translatesAutoresizingMaskIntoConstraints = false
+    contentView.heightAnchor.constraint(greaterThanOrEqualToConstant: 100).isActive = true
+  }
 }

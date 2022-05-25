@@ -16,6 +16,7 @@
 		A6FA2FA5283D74BF00426B34 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FA2FA3283D74BF00426B34 /* TaskCell.swift */; };
 		A6FA2FA6283D74BF00426B34 /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6FA2FA4283D74BF00426B34 /* TaskCell.xib */; };
 		A6FA2FA8283D88B500426B34 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FA2FA7283D88B400426B34 /* Categories.swift */; };
+		A6FA2FAA283DB6C200426B34 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FA2FA9283DB6C200426B34 /* AddTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A6FA2FA3283D74BF00426B34 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		A6FA2FA4283D74BF00426B34 /* TaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCell.xib; sourceTree = "<group>"; };
 		A6FA2FA7283D88B400426B34 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		A6FA2FA9283DB6C200426B34 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				A6FA2F8E283D08A800426B34 /* TodoListViewController.swift */,
+				A6FA2FA9283DB6C200426B34 /* AddTaskViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6FA2FA5283D74BF00426B34 /* TaskCell.swift in Sources */,
+				A6FA2FAA283DB6C200426B34 /* AddTaskViewController.swift in Sources */,
 				A6FA2F8F283D08A800426B34 /* TodoListViewController.swift in Sources */,
 				A6FA2FA8283D88B500426B34 /* Categories.swift in Sources */,
 				A6FA2F8B283D08A800426B34 /* AppDelegate.swift in Sources */,
