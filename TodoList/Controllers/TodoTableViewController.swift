@@ -9,7 +9,6 @@ import UIKit
 import RealmSwift
 
 class TodoTableViewController: SwipeTableViewController {
-  
   var realm = try! Realm()
   var tasks: Results<Task>?
   
@@ -100,7 +99,5 @@ class TodoTableViewController: SwipeTableViewController {
         print("Error deleting task, \(error.localizedDescription)")
       }
     }
-    
   }
-  
 }

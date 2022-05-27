@@ -10,11 +10,15 @@ import SwipeCellKit
 
 class TaskCell: SwipeTableViewCell {
   
+  // MARK: - IBOutlets
+  
   @IBOutlet weak var categoryImageView: UIImageView!
   @IBOutlet weak var checkmarkImageView: UIImageView!
   @IBOutlet weak var dateLabel: UILabel!
   @IBOutlet weak var taskLabel: UILabel!
   @IBOutlet weak var taskView: UIView!
+  
+  // MARK: - Properties
   
   var isCompleted: Bool = false {
     didSet {
@@ -40,11 +44,15 @@ class TaskCell: SwipeTableViewCell {
     }
   }
   
+  // MARK: - Cell lifecycle methods
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     
     makeLayout()
   }
+  
+  // MARK: - Other methods
   
   private func makeLayout() {
     taskView.layer.cornerRadius = 20.0

@@ -89,7 +89,7 @@ class AddTaskViewController: UIViewController {
     NSLayoutConstraint.activate(constraints)
   }
   
-  // MARK: - Helpers methods
+  // MARK: - Other methods
   
   private func makeLayout() {
     taskTextView.translatesAutoresizingMaskIntoConstraints = false
